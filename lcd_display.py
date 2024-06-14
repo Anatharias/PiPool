@@ -1,15 +1,17 @@
+# lcd_display.py
+
 import time
 from TM1637 import TM1637
 
 # Pin definitions
-CLK_E = 5
-DIO_E = 6
-CLK_S = 13
-DIO_S = 19
-CLK_A = 26
-DIO_A = 21
-CLK_H = 20
-DIO_H = 16
+CLK_E = 13
+DIO_E = 26
+CLK_S = 27
+DIO_S = 21
+CLK_A = 19
+DIO_A = 20
+CLK_H = 23
+DIO_H = 22
 
 # Initialize LCD displays
 lcd_E = TM1637(clk=CLK_E, dio=DIO_E)
@@ -17,8 +19,15 @@ lcd_S = TM1637(clk=CLK_S, dio=DIO_S)
 lcd_A = TM1637(clk=CLK_A, dio=DIO_A)
 lcd_H = TM1637(clk=CLK_H, dio=DIO_H)
 
-def display_temperature(lcd, temperature):
-    lcd.show(f"{temperature:.1f}")
+def display_temperature(display, temp):
+    try:
+        temp_str = "{:.1f}".format(temp)
+        int_part, frac_part = temp_str.split(".")
+        # Insérer un espace entre les deux premiers chiffres et le premier chiffre décimal
+        display_str = f"{int_part[:2]} {frac_part[0]}"
+        display.show(display_str)
+    except (ValueError, TypeError) as e:
+        print(f"Error displaying temperature on {display}: {e}")
 
 def display_time(lcd):
     current_time = time.strftime("%H%M")
