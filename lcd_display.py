@@ -43,5 +43,5 @@ def lcd_display_loop(temperatures):
         time.sleep(1)
 
 if __name__ == "__main__":
-    dummy_temperatures = {'temp_E': 12.0, 'temp_A': 13.0, 'temp_S': 15.0}
+    dummy_temperatures = {'temp_E': 12.0, 'temp_A': 13.0, 'temp_S': 14.0}
     lcd_display_loop(dummy_temperatures)
