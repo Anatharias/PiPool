@@ -1,7 +1,7 @@
 # lcd_display.py
 
 import time
-from TM1637 import TM1637
+import tm1637
 
 # Pin definitions
 CLK_E = 13
@@ -14,10 +14,10 @@ CLK_H = 23
 DIO_H = 22
 
 # Initialize LCD displays
-lcd_E = TM1637(clk=CLK_E, dio=DIO_E)
-lcd_S = TM1637(clk=CLK_S, dio=DIO_S)
-lcd_A = TM1637(clk=CLK_A, dio=DIO_A)
-lcd_H = TM1637(clk=CLK_H, dio=DIO_H)
+lcd_E = tm1637.TM1637("/dev/gpiochip0", clk=CLK_E, dio=DIO_E)
+lcd_S = tm1637.TM1637("/dev/gpiochip0", clk=CLK_S, dio=DIO_S)
+lcd_A = tm1637.TM1637("/dev/gpiochip0", clk=CLK_A, dio=DIO_A)
+lcd_H = tm1637.TM1637("/dev/gpiochip0", clk=CLK_H, dio=DIO_H)
 
 def display_temperature(display, temp):
     try:
@@ -31,7 +31,8 @@ def display_temperature(display, temp):
 
 def display_time(lcd):
     current_time = time.strftime("%H%M")
-    lcd.show(current_time)
+    lcd.show(current_time, colon=True)
+
 
 def lcd_display_loop(temperatures):
     while True:
@@ -42,5 +43,5 @@ def lcd_display_loop(temperatures):
         time.sleep(1)
 
 if __name__ == "__main__":
-    dummy_temperatures = {'temp_E': 25.0, 'temp_A': 26.0, 'temp_S': 27.0}
+    dummy_temperatures = {'temp_E': 12.0, 'temp_A': 13.0, 'temp_S': 15.0}
     lcd_display_loop(dummy_temperatures)
