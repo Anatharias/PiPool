@@ -5,9 +5,9 @@ from sensor import read_all_temperatures, read_light
 
 # Pin definitions
 RELAY_PIN = 18
-BUTTON_1_PIN = 27
-BUTTON_2_PIN = 22
-BUTTON_3_PIN = 23
+BUTTON_1_PIN = 5
+BUTTON_2_PIN = 6
+BUTTON_3_PIN = 16
 
 # Initialize GPIO
 GPIO.setwarnings(False)
@@ -101,6 +101,9 @@ def control_loop():
                 temp_Sortie_values.append(temp_Sortie)
                 mean_temp_Sortie_5min = sum(temp_Sortie_values) / len(temp_Sortie_values)
 
+                print(f"Mean temp_Sortie: {mean_temp_Sortie_5min:.2f}°C")
+                print(f"Mean light intensity: {moy_lum_5min:.2f} lux")
+
                 if moy_lum_5min > 10000:  # Sunshine condition
                     relay_on()
                     log_decision("Sunshine detected, running pump.")
@@ -116,12 +119,12 @@ def control_loop():
                         relay_off()
                         log_decision("Temperature difference too high, stopping pump.")
                         if temp_diff <= 0.3:
-                            log_decision("Waiting for 10 minutes.")
+                            log_decision("Waiting for 10 minutes due to insignificant temperature difference.")
                             time.sleep(600)  # Wait for 10 minutes
                             relay_on()
                             time.sleep(360)  # Run pump for 6 minutes and check again
                         elif 0.4 <= temp_diff <= 0.5:
-                            log_decision("Waiting for 10 minutes.")
+                            log_decision("Waiting for 10 minutes due to insignificant temperature difference.")
                             time.sleep(600)  # Wait for 10 minutes
                             relay_on()
                             time.sleep(300)  # Run pump for 5 minutes and check again
@@ -144,4 +147,7 @@ def control_loop():
         GPIO.cleanup()
 
 if __name__ == "__main__":
-    control_loop()
+    try:
+        control_loop()
+    finally:
+        GPIO.cleanup()  # Ensure GPIO is cleaned up, turning off the relay
