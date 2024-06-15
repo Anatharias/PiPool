@@ -1,32 +1,28 @@
-#will be used to store the main component of the pipool script
-import time
-from sensor import Sensor
-from control import Control
-from thingsboard import ThingsBoard
-from error_handler import ErrorHandler
+# main.py
+
+import threading
+from control import control_loop
+from sensor import sensor_loop
+from thingsboard import thingsboard_loop
+from lcd_display import lcd_display_loop
 
 def main():
-    sensor = Sensor()
-    control = Control(sensor)
-    thingsboard = ThingsBoard()
-    error_handler = ErrorHandler()
+    temperatures = {'temp_E': 25.0, 'temp_A': 26.0, 'temp_S': 27.0, 'light': 0.0}  # Initial values
 
-    try:
-        while True:
-            try:
-                # Read sensor data
-                sensor_data = sensor.read_all()
-                # Log sensor data to ThingsBoard
-                thingsboard.log_data(sensor_data)
-                # Perform control logic
-                control.evaluate_conditions()
-                # Sleep for 15 seconds before the next loop
-                time.sleep(15)
-            except Exception as e:
-                error_handler.handle_error(e)
-    except KeyboardInterrupt:
-        print("System shutdown initiated.")
-        control.shutdown()
+    control_thread = threading.Thread(target=control_loop)
+    sensor_thread = threading.Thread(target=sensor_loop, args=(temperatures,))
+    thingsboard_thread = threading.Thread(target=thingsboard_loop)
+    lcd_display_thread = threading.Thread(target=lcd_display_loop, args=(temperatures,))
+
+    control_thread.start()
+    sensor_thread.start()
+    thingsboard_thread.start()
+    lcd_display_thread.start()
+
+    control_thread.join()
+    sensor_thread.join()
+    thingsboard_thread.join()
+    lcd_display_thread.join()
 
 if __name__ == "__main__":
     main()
