@@ -140,9 +140,9 @@ def control_loop():
                     print("Reason: Running pump for 5 minutes as temp_Entree < temp_Air")
                     time.sleep(300)  # Run pump for 5 minutes
                     relay_off()
-                    log_decision("Waiting for 60 minutes.")
-                    print("Reason: Waiting for 60 minutes")
-                    time.sleep(3600)  # Wait for 60 minutes
+                    log_decision("Waiting for 10 minutes.")
+                    print("Reason: Waiting for 10 minutes")
+                    time.sleep(600)  # Wait for 10 minutes
 
                 else:
                     relay_off()
@@ -152,7 +152,7 @@ def control_loop():
                 time_since_last_check = 0
 
     except KeyboardInterrupt:
-        GPIO.cleanup()
+        pass
 
 if __name__ == "__main__":
     try:
