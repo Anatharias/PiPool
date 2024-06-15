@@ -107,6 +107,7 @@ def control_loop():
                 if moy_lum_5min > 10000:  # Sunshine condition
                     relay_on()
                     log_decision("Sunshine detected, running pump.")
+                    print("Reason: Sunshine detected")
                     time.sleep(360)  # Wait 6 minutes to replace water in collectors
                     temp_Sortie = temperatures.get('temp_S')
                     temp_Entree = temperatures.get('temp_E')
@@ -115,16 +116,20 @@ def control_loop():
                     if temp_Entree <= mean_temp_Sortie_5min + 0.5:
                         relay_on()
                         log_decision("Temperature difference acceptable, keeping pump on.")
+                        print("Reason: Temperature difference acceptable")
                     else:
                         relay_off()
                         log_decision("Temperature difference too high, stopping pump.")
+                        print("Reason: Temperature difference too high")
                         if temp_diff <= 0.3:
                             log_decision("Waiting for 10 minutes due to insignificant temperature difference.")
+                            print("Reason: Waiting for 10 minutes due to insignificant temperature difference")
                             time.sleep(600)  # Wait for 10 minutes
                             relay_on()
                             time.sleep(360)  # Run pump for 6 minutes and check again
                         elif 0.4 <= temp_diff <= 0.5:
                             log_decision("Waiting for 10 minutes due to insignificant temperature difference.")
+                            print("Reason: Waiting for 10 minutes due to insignificant temperature difference")
                             time.sleep(600)  # Wait for 10 minutes
                             relay_on()
                             time.sleep(300)  # Run pump for 5 minutes and check again
@@ -132,14 +137,17 @@ def control_loop():
                 elif temp_Entree < temp_Air:
                     relay_on()
                     log_decision("Running pump for 5 minutes as temp_Entree < temp_Air.")
+                    print("Reason: Running pump for 5 minutes as temp_Entree < temp_Air")
                     time.sleep(300)  # Run pump for 5 minutes
                     relay_off()
                     log_decision("Waiting for 60 minutes.")
+                    print("Reason: Waiting for 60 minutes")
                     time.sleep(3600)  # Wait for 60 minutes
 
                 else:
                     relay_off()
                     log_decision("Conditions not met, stopping pump.")
+                    print("Reason: Conditions not met")
 
                 time_since_last_check = 0
 
