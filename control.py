@@ -1,3 +1,4 @@
+#edited on github directly
 import RPi.GPIO as GPIO
 import time
 from collections import deque
@@ -150,4 +151,8 @@ if __name__ == "__main__":
     try:
         control_loop()
     finally:
+<<<<<<< HEAD
         GPIO.cleanup()  # Ensure GPIO is cleaned up, turning off the relay
+=======
+        GPIO.cleanup()  # Ensure GPIO is cleaned up, turning off the relay
+>>>>>>> main
