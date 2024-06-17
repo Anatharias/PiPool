@@ -3,7 +3,7 @@
 
 ### Virtual environment
 ```
-python3 -m venv pipool
+python3 -m venv ~/pipool
 source ~/pipool/bin/activate
 ```
 
