@@ -7,9 +7,9 @@ from w1thermsensor import W1ThermSensor
 import smbus
 
 # Initialize temperature sensors
-sensor_E = W1ThermSensor("0000006bbe43")
-sensor_A = W1ThermSensor("0000006b6275")
-sensor_S = W1ThermSensor("00000069d1fe")
+sensor_E = W1ThermSensor(sensor_type=W1ThermSensor.DS18B20, sensor_id="0000006bbe43")
+sensor_A = W1ThermSensor(sensor_type=W1ThermSensor.DS18B20, sensor_id="0000006b6275")
+sensor_S = W1ThermSensor(sensor_type=W1ThermSensor.DS18B20, sensor_id="00000069d1fe")
 
 # Initialize light sensor
 DEVICE = 0x23  # I2C address of BH1750
