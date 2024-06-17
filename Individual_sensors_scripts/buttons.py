@@ -3,6 +3,10 @@
 import time
 import RPi.GPIO as GPIO
 
+# Réinitialiser les broches
+GPIO.setwarnings(False)
+GPIO.cleanup()
+
 # Pin definitions for buttons
 BUTTON_B1_PIN = 5
 BUTTON_B2_PIN = 6
