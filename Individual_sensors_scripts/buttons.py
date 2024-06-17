@@ -1,5 +1,5 @@
 # control.py
-------------
+
 import time
 import RPi.GPIO as GPIO
 from sensor import PUMP_RELAY_PIN
