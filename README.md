@@ -1,6 +1,12 @@
 # PiPool
 ## Requirements
 
+### Virtual environment
+```
+python3 -m venv pipool
+source ~/pipool/bin/activate
+```
+
 ### Python and the following modules
 ```
 pip install RPi.GPIO smbus2 w1thermsensor gpiozero bh1750 raspberrypi-tm1637
