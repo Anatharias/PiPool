@@ -1,5 +1,3 @@
-# lcd_display.py
-
 import time
 import tm1637
 
@@ -33,15 +31,10 @@ def display_time(lcd):
     current_time = time.strftime("%H%M")
     lcd.show(current_time, colon=True)
 
-
 def lcd_display_loop(temperatures):
     while True:
-        display_temperature(lcd_E, temperatures['temp_E'])
-        display_temperature(lcd_S, temperatures['temp_A'])
-        display_temperature(lcd_A, temperatures['temp_S'])
-        display_time(lcd_H)
+        display_temperature(lcd_E, temperatures['temp_E'])  # Température de l'eau de la piscine
+        display_temperature(lcd_S, temperatures['temp_S'])  # Température de sortie du collecteur solaire
+        display_temperature(lcd_A, temperatures['temp_A'])  # Température ambiante
+        display_time(lcd_H)  # Afficher l'heure sur l'écran lcd_H
         time.sleep(1)
-
-if __name__ == "__main__":
-    dummy_temperatures = {'temp_E': 12.0, 'temp_A': 13.0, 'temp_S': 14.0}
-    lcd_display_loop(dummy_temperatures)
