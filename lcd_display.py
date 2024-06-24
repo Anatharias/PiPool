@@ -1,15 +1,24 @@
 import time
 import tm1637
+import json
 
-# Pin definitions
-CLK_E = 13
-DIO_E = 26
-CLK_S = 27
-DIO_S = 21
-CLK_A = 19
-DIO_A = 20
-CLK_H = 23
-DIO_H = 22
+# Charger les définitions de pin depuis le fichier config.json
+def load_pin_definitions(file_path):
+    with open(file_path) as f:
+        config = json.load(f)
+        return config['lcd_pins']
+
+pin_config = load_pin_definitions('config.json')
+
+# Utiliser les définitions de pin chargées
+CLK_E = pin_config['CLK_E']
+DIO_E = pin_config['DIO_E']
+CLK_S = pin_config['CLK_S']
+DIO_S = pin_config['DIO_S']
+CLK_A = pin_config['CLK_A']
+DIO_A = pin_config['DIO_A']
+CLK_H = pin_config['CLK_H']
+DIO_H = pin_config['DIO_H']
 
 # Initialize LCD displays
 lcd_E = tm1637.TM1637("/dev/gpiochip0", clk=CLK_E, dio=DIO_E)
