@@ -9,7 +9,7 @@ source ~/pipool/bin/activate
 
 ### Python and the following modules
 ```
-pip install RPi.GPIO smbus2 w1thermsensor gpiozero bh1750 raspberrypi-tm1637
+pip install RPi.GPIO smbus2 w1thermsensor gpiozero raspberrypi-tm1637
 ```
 
 ### for Thingsboard:
