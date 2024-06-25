@@ -27,6 +27,7 @@ class PoolControlSystem:
         self.countdown_start_time = time.time()  # Set countdown start time to current time
         self.last_button_pressed = None
         self.lcd_manager = LCDManager(self.config)  # Initialize LCDManager
+        self.sensor_manager = SensorManager(self.config)  # Initialize SensorManager
 
     def setup_logging(self):
         if self.config['error_logging']['enabled']:
@@ -126,11 +127,10 @@ class PoolControlSystem:
             time.sleep(0.1)
 
     def sensor_loop(self):
-        sensor_manager = SensorManager(self.config)
         while True:
             try:
-                temp_data = sensor_manager.get_temperature_data()
-                light_level = sensor_manager.get_light_level()
+                temp_data = self.sensor_manager.get_temperature_data()
+                light_level = self.sensor_manager.get_light_level()
                 self.temperatures.update(temp_data)
                 self.temperatures['light'] = light_level
                 self.lcd_manager.update_displays(self.temperatures)  # Update LCD displays
@@ -143,24 +143,9 @@ class PoolControlSystem:
             self.lcd_manager.update_displays(self.temperatures)  # Update LCD displays
             time.sleep(self.config['sensors']['temperature']['update_interval'])
 
-    def control_loop(self):
-        while True:
-            if self.countdown_active:
-                time_left = self.config['water_replace_time'] - (time.time() - self.countdown_start_time)
-                if time_left <= 0:
-                    self.countdown_active = False
-                    # Here you can add the logic that should take over once the countdown is finished
-                    print("Countdown finished, control logic taking over")
-            else:
-                # Your existing control logic here
-                print(f"Control Loop: {self.temperatures}")
-            time.sleep(10)
-
     def run(self):
         threads = [
             threading.Thread(target=self.sensor_loop),
-            threading.Thread(target=self.lcd_display_loop),
-            threading.Thread(target=self.control_loop),
             threading.Thread(target=self.button_b1_handler),
             threading.Thread(target=self.button_b2_handler),
             threading.Thread(target=self.log_status)
