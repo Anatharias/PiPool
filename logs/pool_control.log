@@ -1,0 +1,191 @@
+2024-06-25 16:42:09,540 - INFO - 2024-06-25 16:42:09 | RELAY: ON - [Reason: Water replacement in progress] | Temp. Entrée: 25.00 - Moyenne: 25.00 | Temp. Sortie: 27.00 - Moyenne: 27.00 | Temp. Air: 26.00 | Delta Temp: 2.00 | Luminosité: 0.00 - Moyenne: 0.00 | Last Button Pressed: None
+2024-06-25 16:42:09,541 - INFO - Water Replace Time Left: 29.99 seconds
+2024-06-25 16:42:50,237 - ERROR - Error reading sensor data: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+2024-06-25 16:44:54,459 - INFO - 2024-06-25 16:44:54 | RELAY: ON - [Reason: Water replacement in progress] | Temp. Entrée: 25.00 - Moyenne: 25.00 | Temp. Sortie: 27.00 - Moyenne: 27.00 | Temp. Air: 26.00 | Delta Temp: 2.00 | Luminosité: 0.00 - Moyenne: 0.00 | Last Button Pressed: None
+2024-06-25 16:44:54,460 - INFO - Water Replace Time Left: 29.99 seconds
+2024-06-25 16:49:06,396 - INFO - 2024-06-25 16:49:06 | RELAY: ON - [Reason: Water replacement in progress] | Temp. Entrée: 25.00 - Moyenne: 25.00 | Temp. Sortie: 27.00 - Moyenne: 27.00 | Temp. Air: 26.00 | Delta Temp: 2.00 | Luminosité: 0.00 - Moyenne: 0.00 | Last Button Pressed: None
+2024-06-25 16:49:06,399 - INFO - Water Replace Time Left: 29.99 seconds
+2024-06-25 16:50:04,635 - INFO - 2024-06-25 16:50:04 | RELAY: ON - [Reason: Water replacement in progress] | Temp. Entrée: 25.00 - Moyenne: 25.00 | Temp. Sortie: 27.00 - Moyenne: 27.00 | Temp. Air: 26.00 | Delta Temp: 2.00 | Luminosité: 0.00 - Moyenne: 0.00 | Last Button Pressed: None
+2024-06-25 16:50:04,638 - INFO - Water Replace Time Left: 29.99 seconds
+2024-06-25 16:50:50,806 - INFO - Pump stopped by B2
+2024-06-25 16:50:53,007 - INFO - Pump started/restarted by B1
+2024-06-25 16:50:59,356 - ERROR - Error reading sensor data: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+2024-06-25 16:52:52,294 - INFO - 2024-06-25 16:52:52 | RELAY: ON - [Reason: Water replacement in progress] | Temp. Entrée: 25.00 - Moyenne: 25.00 | Temp. Sortie: 27.00 - Moyenne: 27.00 | Temp. Air: 26.00 | Delta Temp: 2.00 | Luminosité: 0.00 - Moyenne: 0.00 | Last Button Pressed: None
+2024-06-25 16:52:52,295 - INFO - Water Replace Time Left: 29.99 seconds
+2024-06-25 16:53:02,297 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 16:53:12,298 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 16:53:22,299 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 16:53:32,300 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 16:53:42,301 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 16:53:52,302 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 16:54:02,303 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 16:54:12,305 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 16:54:22,306 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 16:54:32,307 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 16:54:42,308 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:19:14,769 - ERROR - An unexpected error occurred
+Traceback (most recent call last):
+  File "/home/anatharias/pipool/start_system.py", line 208, in main
+    pool_control.run()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'PoolControlSystem' object has no attribute 'run'
+2024-06-25 17:19:21,075 - ERROR - An unexpected error occurred
+Traceback (most recent call last):
+  File "/home/anatharias/pipool/start_system.py", line 208, in main
+    pool_control.run()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'PoolControlSystem' object has no attribute 'run'
+2024-06-25 17:21:26,422 - INFO - 2024-06-25 17:21:26 | RELAY: ON - [Reason: Water replacement in progress] | Temp. Entrée: 25.00 - Moyenne: 25.00 | Temp. Sortie: 27.00 - Moyenne: 27.00 | Temp. Air: 26.00 | Delta Temp: 2.00 | Luminosité: 0.00 - Moyenne: 0.00 | Last Button Pressed: None
+2024-06-25 17:21:26,423 - INFO - Water Replace Time Left: 29.99 seconds
+2024-06-25 17:21:36,425 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:21:46,426 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:21:56,427 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:22:06,428 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:22:16,429 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:22:26,430 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:22:36,431 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:22:46,432 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:22:56,433 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:23:06,435 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:23:16,436 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:23:26,436 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:23:36,437 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:23:46,438 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:23:56,440 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:24:00,060 - INFO - Pump stopped by B2
+2024-06-25 17:24:01,665 - INFO - Pump started/restarted by B1
+2024-06-25 17:24:06,441 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:24:16,442 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:24:26,443 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:24:36,444 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:24:46,446 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:24:56,447 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:25:06,448 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:25:16,449 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:25:26,450 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:25:36,451 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:25:46,453 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:25:56,454 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:26:06,455 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:26:19,446 - INFO - 2024-06-25 17:26:19 | RELAY: ON - [Reason: Water replacement in progress] | Temp. Entrée: 25.00 - Moyenne: 25.00 | Temp. Sortie: 27.00 - Moyenne: 27.00 | Temp. Air: 26.00 | Delta Temp: 2.00 | Luminosité: 0.00 - Moyenne: 0.00 | Last Button Pressed: None
+2024-06-25 17:26:19,447 - INFO - Water Replace Time Left: 29.99 seconds
+2024-06-25 17:26:29,448 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:26:39,449 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:26:49,450 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:29:46,532 - ERROR - An unexpected error occurred
+Traceback (most recent call last):
+  File "/home/anatharias/pipool/start_system.py", line 208, in main
+    pool_control.run()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'PoolControlSystem' object has no attribute 'run'
+2024-06-25 17:30:46,726 - ERROR - An unexpected error occurred
+Traceback (most recent call last):
+  File "/home/anatharias/pipool/start_system.py", line 208, in main
+    pool_control.run()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'PoolControlSystem' object has no attribute 'run'
+2024-06-25 17:38:20,528 - INFO - Logging status thread is running
+2024-06-25 17:38:20,529 - INFO - 2024-06-25 17:38:20 | RELAY: ON - [Reason: Water replacement in progress] | Temp. Entrée: 25.00 - Moyenne: 25.00 | Temp. Sortie: 27.00 - Moyenne: 27.00 | Temp. Air: 26.00 | Delta Temp: 2.00 | Luminosité: 0.00 - Moyenne: 0.00 | Last Button Pressed: None
+2024-06-25 17:38:20,529 - INFO - Water Replace Time Left: 14.99 seconds
+2024-06-25 17:38:30,530 - INFO - Logging status thread is running
+2024-06-25 17:38:30,532 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:38:40,533 - INFO - Logging status thread is running
+2024-06-25 17:38:40,534 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:38:50,535 - INFO - Logging status thread is running
+2024-06-25 17:38:50,536 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:41:03,556 - ERROR - An unexpected error occurred
+Traceback (most recent call last):
+  File "/home/anatharias/pipool/start_system.py", line 208, in main
+    pool_control.run()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'PoolControlSystem' object has no attribute 'run'
+2024-06-25 17:50:58,956 - INFO - Logging status thread is running
+2024-06-25 17:50:58,959 - INFO - 2024-06-25 17:50:58 | RELAY: ON - [Reason: Water replacement in progress] | Temp. Entrée: 25.00 - Moyenne: 25.00 | Temp. Sortie: 27.00 - Moyenne: 27.00 | Temp. Air: 26.00 | Delta Temp: 2.00 | Luminosité: 0.00 - Moyenne: 0.00 | Last Button Pressed: None
+2024-06-25 17:50:58,960 - INFO - Water Replace Time Left: 14.99 seconds
+2024-06-25 17:51:08,960 - INFO - Logging status thread is running
+2024-06-25 17:51:08,961 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:51:18,962 - INFO - Logging status thread is running
+2024-06-25 17:51:18,963 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:51:28,964 - INFO - Logging status thread is running
+2024-06-25 17:51:28,964 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:51:38,965 - INFO - Logging status thread is running
+2024-06-25 17:51:38,965 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:51:48,966 - INFO - Logging status thread is running
+2024-06-25 17:51:48,967 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:51:58,968 - INFO - Logging status thread is running
+2024-06-25 17:51:58,969 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:52:08,969 - INFO - Logging status thread is running
+2024-06-25 17:52:08,970 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:52:18,971 - INFO - Logging status thread is running
+2024-06-25 17:52:18,972 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:52:28,973 - INFO - Logging status thread is running
+2024-06-25 17:52:28,974 - ERROR - Error in log_status: 'pool_water'
+2024-06-25 17:52:38,620 - ERROR - Error reading sensor data: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+2024-06-25 17:53:33,263 - ERROR - An unexpected error occurred
+Traceback (most recent call last):
+  File "/home/anatharias/pipool/start_system.py", line 200, in main
+    pool_control.run()
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'PoolControlSystem' object has no attribute 'run'
+2024-06-25 17:56:38,066 - INFO - Logging status thread is running
+2024-06-25 17:56:38,066 - INFO - 2024-06-25 17:56:38 | RELAY: ON - [Reason: Water replacement in progress] | Temp. Entrée: 25.00 - Moyenne: 25.00 | Temp. Sortie: 27.00 - Moyenne: 27.00 | Temp. Air: 26.00 | Delta Temp: 2.00 | Luminosité: 0.00 - Moyenne: 0.00 | Last Button Pressed: None
+2024-06-25 17:56:38,067 - INFO - Water Replace Time Left: 14.99 seconds
+2024-06-25 17:56:48,068 - INFO - Logging status thread is running
+2024-06-25 17:56:48,068 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 17:56:58,069 - INFO - Logging status thread is running
+2024-06-25 17:56:58,070 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 17:57:08,071 - INFO - Logging status thread is running
+2024-06-25 17:57:08,072 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 17:57:18,073 - INFO - Logging status thread is running
+2024-06-25 17:57:18,074 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 17:57:28,075 - INFO - Logging status thread is running
+2024-06-25 17:57:28,076 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 17:57:38,076 - INFO - Logging status thread is running
+2024-06-25 17:57:38,077 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:10:03,653 - INFO - Logging status thread is running
+2024-06-25 19:10:03,667 - INFO - 2024-06-25 19:10:03 | RELAY: ON - [Reason: Water replacement in progress] | Temp. Entrée: 25.00 - Moyenne: 25.00 | Temp. Sortie: 27.00 - Moyenne: 27.00 | Temp. Air: 26.00 | Delta Temp: 2.00 | Luminosité: 0.00 - Moyenne: 0.00 | Last Button Pressed: None
+2024-06-25 19:10:03,667 - INFO - Water Replace Time Left: 14.98 seconds
+2024-06-25 19:10:13,668 - INFO - Logging status thread is running
+2024-06-25 19:10:13,669 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:10:23,669 - INFO - Logging status thread is running
+2024-06-25 19:10:23,670 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:10:33,671 - INFO - Logging status thread is running
+2024-06-25 19:10:33,672 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:10:43,672 - INFO - Logging status thread is running
+2024-06-25 19:10:43,673 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:10:53,674 - INFO - Logging status thread is running
+2024-06-25 19:10:53,675 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:11:03,675 - INFO - Logging status thread is running
+2024-06-25 19:11:03,676 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:11:13,676 - INFO - Logging status thread is running
+2024-06-25 19:11:13,677 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:11:23,678 - INFO - Logging status thread is running
+2024-06-25 19:11:23,678 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:11:29,596 - ERROR - Error reading sensor data: Please set pin numbering mode using GPIO.setmode(GPIO.BOARD) or GPIO.setmode(GPIO.BCM)
+2024-06-25 19:11:34,347 - INFO - Logging status thread is running
+2024-06-25 19:11:34,348 - INFO - 2024-06-25 19:11:34 | RELAY: ON - [Reason: Water replacement in progress] | Temp. Entrée: 25.00 - Moyenne: 25.00 | Temp. Sortie: 27.00 - Moyenne: 27.00 | Temp. Air: 26.00 | Delta Temp: 2.00 | Luminosité: 0.00 - Moyenne: 0.00 | Last Button Pressed: None
+2024-06-25 19:11:34,348 - INFO - Water Replace Time Left: 14.99 seconds
+2024-06-25 19:11:44,349 - INFO - Logging status thread is running
+2024-06-25 19:11:44,350 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:11:54,351 - INFO - Logging status thread is running
+2024-06-25 19:11:54,352 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:12:04,353 - INFO - Logging status thread is running
+2024-06-25 19:12:04,353 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:12:14,354 - INFO - Logging status thread is running
+2024-06-25 19:12:14,355 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:12:24,356 - INFO - Logging status thread is running
+2024-06-25 19:12:24,356 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:12:34,357 - INFO - Logging status thread is running
+2024-06-25 19:12:34,358 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:12:44,359 - INFO - Logging status thread is running
+2024-06-25 19:12:44,360 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:12:54,361 - INFO - Logging status thread is running
+2024-06-25 19:12:54,362 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:13:04,363 - INFO - Logging status thread is running
+2024-06-25 19:13:04,364 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:13:14,364 - INFO - Logging status thread is running
+2024-06-25 19:13:14,365 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:13:24,366 - INFO - Logging status thread is running
+2024-06-25 19:13:24,367 - ERROR - Missing key in temperatures or config: 'pool_water'
+2024-06-25 19:13:34,368 - INFO - Logging status thread is running
+2024-06-25 19:13:34,369 - ERROR - Missing key in temperatures or config: 'pool_water'

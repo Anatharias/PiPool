@@ -1,12 +1,12 @@
 {
-  "relay_state": "ON",
+  "relay_state": "OFF",
   "last_button_pressed": "B1",
-  "last_pump_start_time": 1719282590.462507,
+  "last_pump_start_time": 1719350641.6625047,
   "light_threshold": 10000,
   "temp_delta_threshold": 3,
-  "water_replace_time": 30,
+  "water_replace_time": 15,
   "analysis_interval": 600,
-  "average_samples": 30,
+  "average_samples": 35,
   "log_interval": 10,
   "gpio": {
     "button_b1_pin": 5,
@@ -16,7 +16,9 @@
   },
   "error_logging": {
     "enabled": true,
-    "log_directory": "logs"
+    "log_directory": "logs",
+    "log_output": "terminal",
+    "log_output_usage": "file or terminal"
   },
   "sensors": {
     "temperature": {
@@ -53,6 +55,9 @@
       "bus_number": 1
     }
   },
-  "button_b1_last_pressed": "2024-06-24 22:29:50",
-  "button_b2_last_pressed": "2024-06-24 22:29:49"
+  "button_b1_last_pressed": "2024-06-25 17:24:01",
+  "button_b2_last_pressed": "2024-06-25 17:24:00",
+  "pool_water": {
+    "temperature": 25.0
+  }
 }
