@@ -44,8 +44,10 @@ class LCDManager:
             try:
                 displays[key] = tm1637.TM1637(
                     clk=display_info['clk_pin'],
-                    dio=display_info['dio_pin']
+                    dio=display_info['dio_pin'],
+                    brightness=7
                 )
+##                displays[key].brightness(2)  # Set brightness to maximum
             except Exception as e:
                 logging.error(f"Error initializing display {key}: {e}")
         return displays
@@ -57,10 +59,7 @@ class LCDManager:
             display_str = f"{int_part[:2]} {frac_part[0]}"
             self.displays[display_key].show(display_str)
         except (ValueError, TypeError, KeyError) as e:
-            error_msg = f"Error displaying temperature on {display_key}: {e}"
-            print(error_msg)
-            if self.config['error_logging']['enabled']:
-                logging.error(error_msg)
+            logging.error(f"Error displaying temperature on {display_key}: {e}")
 
     def display_time(self) -> None:
         current_time = time.strftime(self.display_settings['time_format'])
@@ -91,13 +90,11 @@ def main():
             lcd_manager.update_displays(temperatures)
             time.sleep(lcd_manager.display_settings['update_interval'])
     except ConfigError as e:
-        print(f"Configuration error: {e}")
+        logging.error(f"Configuration error: {e}")
     except KeyboardInterrupt:
         print("Program terminated by user")
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
-        if config['error_logging']['enabled']:
-            logging.exception("An unexpected error occurred")
+        logging.exception("An unexpected error occurred")
 
 if __name__ == "__main__":
     main()

@@ -1,63 +1,63 @@
 {
-  "relay_state": "OFF",
-  "last_button_pressed": "B1",
-  "last_pump_start_time": 1719350641.6625047,
-  "light_threshold": 10000,
-  "temp_delta_threshold": 3,
-  "water_replace_time": 15,
-  "analysis_interval": 600,
-  "average_samples": 35,
-  "log_interval": 10,
-  "gpio": {
-    "button_b1_pin": 5,
-    "button_b2_pin": 6,
-    "pump_relay_pin": 18,
-    "device": "/dev/gpiochip0"
-  },
-  "error_logging": {
-    "enabled": true,
-    "log_directory": "logs",
-    "log_output": "terminal",
-    "log_output_usage": "file or terminal"
-  },
-  "sensors": {
-    "temperature": {
-      "update_interval": 1,
-      "displays": {
-        "E": {
-          "id": "0000006bbe43",
-          "name": "pool_water",
-          "clk_pin": 24,
-          "dio_pin": 25
-        },
-        "S": {
-          "id": "00000069d1fe",
-          "name": "solar_collector_output",
-          "clk_pin": 27,
-          "dio_pin": 21
-        },
-        "A": {
-          "id": "0000006b6275",
-          "name": "ambient",
-          "clk_pin": 19,
-          "dio_pin": 20
-        },
-        "H": {
-          "name": "time",
-          "clk_pin": 23,
-          "dio_pin": 22
-        }
-      }
+    "relay_state": "ON",
+    "last_button_pressed": "B1",
+    "last_pump_start_time": 1721421445.1636362,
+    "light_threshold": 30000,
+    "temp_delta_threshold": 3,
+    "water_replace_time": 15,
+    "analysis_interval": 600,
+    "average_samples": 35,
+    "log_interval": 10,
+    "gpio": {
+        "button_b1_pin": 5,
+        "button_b2_pin": 6,
+        "pump_relay_pin": 18,
+        "device": "/dev/gpiochip0"
     },
-    "light": {
-      "device_address": "0x23",
-      "mode": "0x20",
-      "bus_number": 1
+    "error_logging": {
+        "enabled": true,
+        "log_directory": "logs",
+        "log_output": "terminal",
+        "log_output_usage": "file or terminal"
+    },
+    "sensors": {
+        "temperature": {
+            "update_interval": 1,
+            "displays": {
+                "E": {
+                    "id": "0000006bbe43",
+                    "name": "pool_water",
+                    "clk_pin": 24,
+                    "dio_pin": 25
+                },
+                "S": {
+                    "id": "00000069d1fe",
+                    "name": "solar_collector_output",
+                    "clk_pin": 27,
+                    "dio_pin": 21
+                },
+                "A": {
+                    "id": "00000069e210",
+                    "name": "ambient",
+                    "clk_pin": 19,
+                    "dio_pin": 20
+                },
+                "H": {
+                    "name": "time",
+                    "clk_pin": 23,
+                    "dio_pin": 22
+                }
+            }
+        },
+        "light": {
+            "device_address": "0x23",
+            "mode": "0x20",
+            "bus_number": 1
+        }
+    },
+    "button_b1_last_pressed": "2024-07-19 16:37:25",
+    "button_b2_last_pressed": "2024-07-19 16:36:12",
+    "pool_water": {
+        "temperature": 25.0
     }
-  },
-  "button_b1_last_pressed": "2024-06-25 17:24:01",
-  "button_b2_last_pressed": "2024-06-25 17:24:00",
-  "pool_water": {
-    "temperature": 25.0
-  }
 }
